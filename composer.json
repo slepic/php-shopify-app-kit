@@ -1,0 +1,33 @@
+{
+    "name": "slepic/shopify-app-kit",
+    "description": "Simple PHP kit for development of Shopify apps",
+    "keywords": ["Shopify"],
+    "homepage": "https://github.com/slepic/php-shopify-app-kit",
+    "type": "library",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/slepic/slexphp-simple-http-api-client.git"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "psr/http-factory": "^1.0",
+        "psr/http-client": "^1.0",
+        "slexphp/simple-http-api-client": "dev-master"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Slepic\\Shopify\\": "src/"
+        }
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.2",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
