@@ -19,6 +19,7 @@ final class ShopifyGraphqlClient implements ShopifyGraphqlClientInterface
         $this->client = $client;
         $this->shopDomain = $shopDomain;
         $this->headers = $headers;
+        $this->headers['content-type'] = 'application/json';
     }
 
     public function query(string $query, array $variables = []): ShopifyResponse

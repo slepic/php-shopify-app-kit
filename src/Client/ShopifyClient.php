@@ -19,6 +19,7 @@ final class ShopifyClient implements ShopifyClientInterface
         $this->client = $client;
         $this->shopDomain = $shopDomain;
         $this->headers = $headers;
+        $this->headers['content-type'] = 'application/json';
     }
 
     public function call(string $method, string $endpoint, $body = null, array $query = []): ShopifyResponse
