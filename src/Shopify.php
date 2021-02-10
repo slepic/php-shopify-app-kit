@@ -199,7 +199,7 @@ class Shopify
                 'POST',
                 '/admin/oauth/access_token',
                 [],
-                [],
+                ['content-type' => 'application/json'],
                 [
                     'client_id'     => (string) $this->credentials->getApiKey(),
                     'client_secret' => (string) $this->credentials->getSecret(),
