@@ -4,18 +4,12 @@
     "keywords": ["Shopify"],
     "homepage": "https://github.com/slepic/php-shopify-app-kit",
     "type": "library",
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/slepic/slexphp-simple-http-api-client.git"
-        }
-    ],
     "require": {
         "php": ">=7.4",
         "ext-json": "*",
         "psr/http-factory": "^1.0",
         "psr/http-client": "^1.0",
-        "slexphp/simple-http-api-client": "dev-master"
+        "slexphp/simple-http-api-client": "^1.0"
     },
     "license": "MIT",
     "autoload": {
