@@ -70,6 +70,9 @@ class WebhookRequestFactory
             throw new InvalidWebhookRequestException('Unsupported webhook content type ' . $contentTypeHeader);
         }
 
-        return new WebhookRequest($shopDomain, $topicHeader, $data);
+        $webhookId = $request->getHeaderLine('X-Shopify-Webhook-Id');
+        $apiVersion = $request->getHeaderLine('X-Shopify-API-Version');
+
+        return new WebhookRequest($webhookId, $apiVersion, $shopDomain, $topicHeader, $data);
     }
 }
